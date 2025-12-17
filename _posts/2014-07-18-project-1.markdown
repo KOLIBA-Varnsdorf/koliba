@@ -2,11 +2,7 @@
 layout: default
 modal-id: 1
 date: 2014-07-18
-<div class="image-text-container">
-  <img src="img/portfolio/cabin.jpg" alt="Cabin" class="overlay-image">
-  <div class="overlay-text">Ausstattung</div>
-</div>
-
+img: cabin.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
