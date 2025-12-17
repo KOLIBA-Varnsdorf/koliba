@@ -7932,25 +7932,32 @@ readers do not read off random characters that represent icons */
   src: url("../webfonts/fa-v4compatibility.woff2") format("woff2"), url("../webfonts/fa-v4compatibility.ttf") format("truetype");
   unicode-range: U+F041,U+F047,U+F065-F066,U+F07D-F07E,U+F080,U+F08B,U+F08E,U+F090,U+F09A,U+F0AC,U+F0AE,U+F0B2,U+F0D0,U+F0D6,U+F0E4,U+F0EC,U+F10A-F10B,U+F123,U+F13E,U+F148-F149,U+F14C,U+F156,U+F15E,U+F160-F161,U+F163,U+F175-F178,U+F195,U+F1F8,U+F219,U+F27A; }
 
-/* Profilbild rund, zentriert und responsive */
-.profile-container {
-  text-align: center; /* Bild zentrieren */
-  margin-bottom: 30px; /* Abstand nach unten, optional */
-}
-
-.profile-img {
-  width: 220px;        /* Größe Desktop */
-  height: 220px;
-  border-radius: 50%;  /* rund */
-  object-fit: cover;   /* Bild proportional zuschneiden */
+.image-text-container {
+  position: relative;
   display: inline-block;
+  text-align: center;
 }
 
-/* Responsive für Tablets/Handys */
+.overlay-image {
+  display: block;
+  width: 100%;   /* passt Bild an Container an */
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
 @media (max-width: 768px) {
-  .profile-img {
-    width: 160px;
-    height: 160px;
+  .overlay-text {
+    font-size: 18px;
   }
 }
 
